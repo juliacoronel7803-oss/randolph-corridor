@@ -1,174 +1,308 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Randolph Green Equity Corridor - South LA</title>
-    <!-- Load Tailwind CSS -->
+    <title>Randolph Green Equity Corridor | South LA Vision</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        /* Custom font import (Inter is the default Tailwind recommendation) */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7fafc; /* Tailwind gray-50 */
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); }
+        .hero-pattern {
+            background-color: #064e3b;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
         }
-        .container-section {
-            padding: 4rem 1rem;
+        .text-gradient {
+            background: linear-gradient(to right, #34d399, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-white text-slate-900 antialiased selection:bg-emerald-100 selection:text-emerald-900">
 
-    <!-- Header & Hero Section -->
-    <header class="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 py-8 md:py-16 flex flex-col md:flex-row items-center justify-between">
-            <!-- Title Content -->
-            <div class="md:w-3/5">
-                <p class="text-emerald-200 font-semibold uppercase tracking-widest text-sm mb-2">South LA Infrastructure Capstone Project</p>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
-                    The Randolph Line Green Equity Corridor
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-100 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white shadow-lg shadow-emerald-200">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <span class="font-extrabold text-slate-900 text-lg tracking-tight uppercase">Randolph Corridor</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-10 text-sm font-semibold text-slate-600">
+                <a href="#mission" class="hover:text-emerald-600 transition-colors">Our Mission</a>
+                <a href="#challenge" class="hover:text-emerald-600 transition-colors">The Challenge</a>
+                <a href="#impact" class="hover:text-emerald-600 transition-colors">Community Impact</a>
+                <a href="#contact" class="bg-emerald-600 text-white px-6 py-2.5 rounded-full hover:bg-emerald-700 transition shadow-md hover:shadow-emerald-200">Take Action</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-widest mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    Environmental Justice Initiative
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-[1.1] mb-8">
+                    A Future Where Every South LA Resident <span class="text-gradient">Breathes Clean Air.</span>
                 </h1>
-                <p class="text-xl text-emerald-100 mb-8">
-                    Transforming 4 miles of abandoned railway into a climate-resilient, community-owned transportation network.
+                <p class="text-xl text-emerald-50/80 leading-relaxed mb-10 max-w-2xl">
+                    Transforming 4 miles of the Randolph Street railroad into a flourishing greenway, protected bike path, and a hub for community connection.
                 </p>
-                <button onclick="document.getElementById('benefits').scrollIntoView({ behavior: 'smooth' })" class="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105">
-                    Explore the Vision <i class="fas fa-arrow-right ml-2"></i>
-                </button>
-            </div>
-            <!-- Image Placeholder -->
-            <div class="mt-8 md:mt-0 md:w-2/5 flex justify-center">
-                <img src="https://placehold.co/400x300/38a169/ffffff?text=Corridor+Rendering" 
-                     alt="Architectural rendering of the proposed green corridor with cyclists and pedestrians." 
-                     class="rounded-xl shadow-2xl object-cover w-full max-w-sm">
+                <div class="flex flex-wrap gap-4">
+                    <a href="#mission" class="px-8 py-4 bg-emerald-500 text-white font-bold rounded-2xl hover:bg-emerald-400 transition transform hover:-translate-y-1 shadow-xl shadow-emerald-900/40">
+                        Read Our Mission
+                    </a>
+                    <a href="#impact" class="px-8 py-4 bg-white/10 text-white font-bold rounded-2xl border border-white/20 hover:bg-white/20 transition backdrop-blur-sm">
+                        View Project Scope
+                    </a>
+                </div>
             </div>
         </div>
-    </header>
+        
+        <!-- Abstract Decoration -->
+        <div class="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+            <svg class="h-full w-full text-emerald-500/10" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+            </svg>
+        </div>
+    </section>
 
-    <!-- Problem Section: The Redzone -->
-    <section class="container-section bg-gray-50 border-b border-gray-200">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-red-600 mb-4">
-                Addressing the "Redzone" Reality
-            </h2>
-            <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-                The Randolph corridor is currently a site of systemic environmental neglect, creating a health and safety crisis for South LA residents.
-            </p>
-
-            <div class="flex flex-wrap justify-center gap-8">
-                <!-- Problem Point 1: Heat -->
-                <div class="w-full sm:w-80 p-6 bg-white rounded-xl shadow-lg border-t-4 border-red-500">
-                    <i class="fas fa-thermometer-half text-5xl text-red-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Urban Heat Island</h3>
-                    <p class="text-gray-500">
-                        Lack of tree canopy means temperatures are 5-10°F hotter, increasing heat-related illnesses.
-                    </p>
+    <!-- Mission & Vision (Based on Team Meeting Notes) -->
+    <section id="mission" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-12">
+                    <div>
+                        <h2 class="text-sm font-bold text-emerald-600 uppercase tracking-widest mb-4">Our Core Philosophy</h2>
+                        <h3 class="text-4xl font-extrabold text-slate-900 mb-6">The Collective Vision</h3>
+                        <p class="text-lg text-slate-600 leading-relaxed italic border-l-4 border-emerald-500 pl-6 bg-white py-6 rounded-r-2xl shadow-sm">
+                            "We imagine a community defined by health, cultural pride, and shared public spaces that strengthen connection and well-being."
+                        </p>
+                    </div>
+                    
+                    <div class="grid sm:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-emerald-600">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900">Green Equity</h4>
+                            <p class="text-sm text-slate-600">Eliminating environmental disparity through accessible flourishing green spaces.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-emerald-600">
+                                <i class="fas fa-bicycle"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900">Mobility Justice</h4>
+                            <p class="text-sm text-slate-600">Equitable access to clean transportation and protected bike networks.</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- Problem Point 2: Pollution -->
-                <div class="w-full sm:w-80 p-6 bg-white rounded-xl shadow-lg border-t-4 border-red-500">
-                    <i class="fas fa-lungs text-5xl text-red-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Air Quality Crisis</h3>
-                    <p class="text-gray-500">
-                        Proximity to industrial areas and heavy traffic leads to high rates of asthma and respiratory disease.
+                
+                <div class="bg-emerald-900 rounded-[3rem] p-12 text-white relative overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 right-0 p-8 opacity-10">
+                        <i class="fas fa-quote-right text-9xl"></i>
+                    </div>
+                    <h4 class="text-emerald-400 font-bold uppercase tracking-widest text-xs mb-6">Final Mission Statement</h4>
+                    <p class="text-2xl font-medium leading-relaxed mb-8">
+                        "Creating a future where every South LA resident breathes clean air, enjoys flourishing green spaces, and has equitable access to mobility and opportunity."
                     </p>
-                </div>
-                <!-- Problem Point 3: Blight/Barrier -->
-                <div class="w-full sm:w-80 p-6 bg-white rounded-xl shadow-lg border-t-4 border-red-500">
-                    <i class="fas fa-exclamation-triangle text-5xl text-red-500 mb-4"></i>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Safety & Barrier</h3>
-                    <p class="text-gray-500">
-                        The abandoned line is a physical barrier and magnet for illegal dumping, impacting community safety.
-                    </p>
+                    <div class="h-1 w-20 bg-emerald-500 rounded-full"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions/Benefits Section (Health, Jobs, Equity) -->
-    <section id="benefits" class="container-section bg-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl font-bold text-emerald-700 mb-4 text-center">
-                Our Triple Bottom Line: Health, Wealth, and Justice
-            </h2>
-            <p class="text-xl text-gray-600 mb-12 max-w-4xl mx-auto text-center">
-                The Randolph Corridor is designed for measurable impact in the three areas where South LA needs it most.
-            </p>
-
-            <div class="space-y-12">
-                <!-- Benefit 1: Health & Climate Resilience -->
-                <div class="flex flex-col md:flex-row items-center bg-emerald-50 p-8 rounded-xl shadow-lg">
-                    <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
-                        <i class="fas fa-heart-pulse text-6xl text-emerald-600"></i>
+    <!-- The Challenge Section -->
+    <section id="challenge" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold text-red-600 uppercase tracking-widest mb-4">Current Reality</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-slate-900">Addressing Environmental Neglect</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Heat Island Card -->
+                <div class="group p-8 rounded-3xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-slate-200 transition-all duration-300">
+                    <div class="mb-6 w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fas fa-temperature-high text-2xl"></i>
                     </div>
-                    <div class="md:w-3/4">
-                        <h3 class="text-2xl font-bold text-emerald-800 mb-2">Improved Public Health & Climate Resilience</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2 pl-4">
-                            <li><span class="font-semibold">Tree Canopy & Cool Pavement:</span> Reduces ambient temperatures by up to 10°F, directly fighting the Urban Heat Island effect.</li>
-                            <li><span class="font-semibold">Bioswales:</span> Filters polluted stormwater runoff, contributing to cleaner local waterways.</li>
-                            <li><span class="font-semibold">Active Mobility:</span> Class IV bike lanes and pedestrian paths encourage cycling and walking, improving cardiovascular health.</li>
-                        </ul>
-                    </div>
+                    <h4 class="text-xl font-bold mb-4">Urban Heat Islands</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6">South LA's lack of tree canopy results in extreme heat zones that disproportionately affect elderly and youth residents.</p>
+                    <div class="text-red-600 font-bold text-sm">Action: 2,000+ Native Trees &rarr;</div>
                 </div>
 
-                <!-- Benefit 2: Job Creation & Economic Growth -->
-                <div class="flex flex-col md:flex-row items-center bg-blue-50 p-8 rounded-xl shadow-lg">
-                    <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
-                        <i class="fas fa-briefcase text-6xl text-blue-600"></i>
+                <!-- Industrial Proximity Card -->
+                <div class="group p-8 rounded-3xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-slate-200 transition-all duration-300">
+                    <div class="mb-6 w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fas fa-smog text-2xl"></i>
                     </div>
-                    <div class="md:w-3/4">
-                        <h3 class="text-2xl font-bold text-blue-800 mb-2">Local Job Creation & Economic ROI</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2 pl-4">
-                            <li><span class="font-semibold">High ROI:</span> Every $1.00 invested in this corridor returns approximately $1.72 in local economic activity.</li>
-                            <li><span class="font-semibold">Jobs:</span> Projected to create 15 local jobs per $1 million invested in construction and long-term maintenance.</li>
-                            <li><span class="font-semibold">Business Support:</span> Increased foot traffic and visibility for neighborhood businesses along the route.</li>
-                        </ul>
-                    </div>
+                    <h4 class="text-xl font-bold mb-4">Air Quality Crisis</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6">High rates of respiratory illness due to heavy industrial corridors and lack of natural filtration barriers.</p>
+                    <div class="text-blue-600 font-bold text-sm">Action: Air Quality Monitoring &rarr;</div>
                 </div>
 
-                <!-- Benefit 3: Equity & Anti-Displacement -->
-                <div class="flex flex-col md:flex-row items-center bg-indigo-50 p-8 rounded-xl shadow-lg">
-                    <div class="md:w-1/4 flex justify-center mb-6 md:mb-0">
-                        <i class="fas fa-handshake text-6xl text-indigo-600"></i>
+                <!-- Physical Barriers Card -->
+                <div class="group p-8 rounded-3xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-slate-200 transition-all duration-300">
+                    <div class="mb-6 w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <i class="fas fa-road-barrier text-2xl"></i>
                     </div>
-                    <div class="md:w-3/4">
-                        <h3 class="text-2xl font-bold text-indigo-800 mb-2">Guaranteeing Community Equity</h3>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2 pl-4">
-                            <li><span class="font-semibold">Anti-Displacement Plan:</span> Includes mandated rent stabilization and a local housing trust fund to protect residents from gentrification.</li>
-                            <li><span class="font-semibold">Local Hiring:</span> 40% of all project jobs are reserved for residents within the South LA ZIP codes.</li>
-                            <li><span class="font-semibold">Community Control:</span> Future governance will include a resident-majority oversight board for long-term stewardship.</li>
-                        </ul>
+                    <h4 class="text-xl font-bold mb-4">Physical Barriers</h4>
+                    <p class="text-slate-600 leading-relaxed mb-6">The current railroad is a magnet for dumping and a barrier that separates neighborhoods and prevents safe walking.</p>
+                    <div class="text-amber-600 font-bold text-sm">Action: Reconnecting Streets &rarr;</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Economics -->
+    <section id="impact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-emerald-400 font-bold uppercase tracking-widest text-xs mb-4">Project Benefits</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold mb-8">Economic & Community Empowerment</h3>
+                    <p class="text-slate-400 text-lg mb-10">
+                        Beyond the environment, Julia's research highlights how this project stimulates the local economy through job creation and property value stabilization.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-emerald-400 text-xs"></i>
+                            </div>
+                            <span class="text-slate-300 leading-relaxed"><strong class="text-white">Local Workforce:</strong> Prioritizing hiring from Southeast LA for construction and long-term garden maintenance.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-6 h-6 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-emerald-400 text-xs"></i>
+                            </div>
+                            <span class="text-slate-300 leading-relaxed"><strong class="text-white">Sustainable Upkeep:</strong> Nima's maintenance plan ensures native plant gardens thrive with minimal water and cost.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <div class="aspect-[4/5] rounded-[2.5rem] bg-emerald-800/20 border border-white/10 overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/800x1000/064e3b/ffffff?text=Greenway+Rendering" alt="Greenway visualization" class="w-full h-full object-cover mix-blend-overlay opacity-60">
+                        <div class="absolute inset-0 p-12 flex flex-col justify-end">
+                            <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20">
+                                <div class="text-5xl font-extrabold text-emerald-400 mb-2">4.0 <span class="text-xl">Miles</span></div>
+                                <p class="text-sm text-emerald-50 font-medium">Of continuous green infrastructure connecting South LA communities.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action / Funding -->
-    <section class="container-section bg-emerald-700 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-                Support the Next Great LA Green Space
-            </h2>
-            <p class="text-xl mb-8 opacity-90">
-                This project requires comprehensive funding and community support to move from concept to reality. Join us in building a healthier, wealthier, and more just South LA.
-            </p>
-            <div class="space-y-4 sm:space-y-0 sm:space-x-6">
-                <a href="#" class="inline-block bg-white text-emerald-700 font-bold py-3 px-6 rounded-full shadow-2xl hover:bg-gray-100 transition duration-300">
-                    Review Feasibility Study
-                </a>
-                <a href="#" class="inline-block border-2 border-white text-white font-bold py-3 px-6 rounded-full hover:bg-emerald-600 transition duration-300">
-                    Contact Our Team
-                </a>
+    <!-- Contact & Action Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="bg-slate-50 rounded-[3rem] overflow-hidden shadow-sm border border-slate-100">
+                <div class="grid lg:grid-cols-2">
+                    <div class="p-12 lg:p-20 flex flex-col justify-center">
+                        <h3 class="text-3xl font-extrabold text-slate-900 mb-6">Join the Movement</h3>
+                        <p class="text-slate-600 mb-10 text-lg">
+                            Whether you're a local resident, business owner, or community advocate, your voice is essential to the Randolph Corridor.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-6">
+                                <div class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center text-emerald-600 border border-slate-200">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Follow Updates</p>
+                                    <p class="font-bold text-slate-900">@southeastla.en</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6">
+                                <div class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center text-emerald-600 border border-slate-200">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">General Inquiries</p>
+                                    <p class="font-bold text-slate-900">seengreencorridor@lacity.org</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-emerald-600 p-12 lg:p-20 text-white">
+                        <form class="space-y-6" onsubmit="event.preventDefault();">
+                            <div>
+                                <label class="block text-xs font-bold text-emerald-200 uppercase tracking-widest mb-2">Name</label>
+                                <input type="text" class="w-full bg-emerald-700/50 border border-emerald-500 rounded-xl px-4 py-3 text-white placeholder:text-emerald-300 outline-none focus:ring-2 focus:ring-white/50 transition" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-emerald-200 uppercase tracking-widest mb-2">Email Address</label>
+                                <input type="email" class="w-full bg-emerald-700/50 border border-emerald-500 rounded-xl px-4 py-3 text-white placeholder:text-emerald-300 outline-none focus:ring-2 focus:ring-white/50 transition" placeholder="Email@domain.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-emerald-200 uppercase tracking-widest mb-2">Message</label>
+                                <textarea rows="4" class="w-full bg-emerald-700/50 border border-emerald-500 rounded-xl px-4 py-3 text-white placeholder:text-emerald-300 outline-none focus:ring-2 focus:ring-white/50 transition" placeholder="How would you like to get involved?"></textarea>
+                            </div>
+                            <button class="w-full py-4 bg-white text-emerald-700 font-extrabold rounded-xl shadow-lg hover:bg-emerald-50 transition transform hover:-translate-y-1">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 py-6">
-        <div class="max-w-7xl mx-auto px-4 text-center text-sm">
-            <p>&copy; 2025 Randolph Green Equity Corridor Capstone Project. All Rights Reserved.</p>
+    <footer class="bg-slate-50 pt-20 pb-10 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-emerald-600 rounded flex items-center justify-center text-white">
+                            <i class="fas fa-leaf text-sm"></i>
+                        </div>
+                        <span class="font-extrabold text-slate-900 tracking-tight uppercase">Randolph Corridor</span>
+                    </div>
+                    <p class="text-slate-500 max-w-sm leading-relaxed">
+                        An environmental justice project led by Sarah, Nathaly, Dara, Nima, and Julia. Dedicated to reclaiming public land for the community health of Southeast LA.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Resource Links</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a href="#" class="hover:text-emerald-600 transition">Environmental Benefits</a></li>
+                        <li><a href="#" class="hover:text-emerald-600 transition">Maintenance Plan</a></li>
+                        <li><a href="#" class="hover:text-emerald-600 transition">Economic Impact Study</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6 uppercase text-xs tracking-widest">Office</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        5585 Randolph St,<br>Los Angeles, CA 90040
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-10 border-t border-slate-200 text-xs text-slate-400 font-medium">
+                <p>&copy; 2025 Randolph Green Equity Corridor Project. All rights reserved.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-slate-900 transition underline underline-offset-4">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-900 transition underline underline-offset-4">Project Documentation</a>
+                </div>
+            </div>
         </div>
     </footer>
 
